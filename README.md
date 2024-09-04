@@ -1,2 +1,1 @@
-# web3-react
-web3-react
+# 用于研究web3前端开发（React）
