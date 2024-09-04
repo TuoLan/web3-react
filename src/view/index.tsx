@@ -3,7 +3,7 @@ import styles from "./index.module.scss"
 function View() {
   return (
     <div className={styles.view}>
-      index
+      Hello Web3!
     </div>
   )
 }
