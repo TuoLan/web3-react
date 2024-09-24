@@ -10,6 +10,7 @@
     "antd": "^5.20.5",
     "axios": "^1.7.7",
     "commitizen": "^4.3.0",
+    "js-file-download": "^0.4.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
+    "@types/axios": "^0.14.0",
     "cz-conventional-changelog": "^3.3.0",
     "cz-git": "^1.9.4",
     "husky": "^9.1.5",
