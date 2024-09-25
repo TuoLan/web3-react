@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
 import styles from "./index.module.scss"
@@ -12,7 +12,6 @@ type FieldType = {
 
 function Login() {
   const navigate = useNavigate()
-  const [num, setNum] = useState<number>(0)
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
     console.log('Success:', values);
     navigate('/home')

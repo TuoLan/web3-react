@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import type { FormProps } from 'antd';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 import styles from "./index.module.scss"
 import { useNavigate } from 'react-router-dom';
-import service from "../../request/index"
+import service from "../../request"
 
 type FieldType = {
   username?: string;
@@ -12,11 +12,9 @@ type FieldType = {
 
 function Register() {
   const navigate = useNavigate()
-  const [num, setNum] = useState<number>(0)
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
     console.log('Success:', values);
     service.POST('/api/register', values).then((res) => {
-      debugger
       console.log(res);
       navigate('/login')
     })

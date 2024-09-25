@@ -1,10 +1,11 @@
 import { BASE_URL, TIMEOUT } from './env';
 import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse, AxiosRequestConfig } from 'axios';
+import { message } from 'antd';
 
 // 定义响应数据的通用结构
 // interface ApiResponse<T> {
 //   code: number;
-//   message: string;
+//   msg: string;
 //   data: T;
 // }
 
@@ -36,8 +37,8 @@ service.interceptors.response.use(
     // 处理响应数据
     const res = response.data;
     if (res.code !== 'ok') {
-      console.error('Response error:', res.message);
-      return Promise.reject(new Error(res.message || 'Error'));
+      message.warning(res.msg)
+      return Promise.reject(new Error(res.msg || 'Error'));
     }
     return res;
   },
